@@ -1,0 +1,186 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Biểu Đồ Thống Kê</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="index.html"><i class="fas fa-home"></i>Bảng Điều Khiển</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-file-alt"></i>Hình Thức</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-table"></i>Bảng</a>
+                </li>
+                <li>
+                    <a href="charts.html"><i class="fas fa-chart-bar"></i>Bảng Xếp Hạng</a>
+                </li>
+               
+                <li>
+                    <a href="#authmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-user-shield"></i>Xác Thực</a>
+                    <ul class="collapse list-unstyled" id="authmenu">
+                        <li>
+                            <a href="/login.html"><i class="fas fa-lock"></i>Đăng Nhập</a>
+                        </li>
+                        <li>
+                            <a href="/dangki.html"><i class="fas fa-user-plus"></i>Đăng Kí</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-user-lock"></i>Quên Mật Khẩu</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="users.html"><i class="fas fa-user-friends"></i>Người Dùng</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i>Cài Đặt</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown">
+                                    <i class="fas fa-link"></i> <span>Truy Cập Nhanh</span> 
+                                    <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i>Nhật Kí Truy Cập</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i>Sao Lưu</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i>Cập Nhật</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i>Vai Trò</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>Dũng</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i>Hồ Sơ</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Thư</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Cài Đặt</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="/login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>Đăng Xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container">
+                    <div class="page-title">
+                        <h3>Bảng Xếp Hạng</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Đường</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="linechart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Cột</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="barchart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Tròn</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="piechart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Tròn </div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="doughnutchart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Xếp Chồng</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="stackedbarchart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">Biểu Đồ Radar</div>
+                                <div class="card-body">
+                                    <p class="card-title"></p>
+                                    <div class="canvas-wrapper">
+                                        <canvas class="chart" id="radarchart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chartsjs/Chart.min.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

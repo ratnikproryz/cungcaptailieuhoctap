@@ -1,0 +1,24 @@
+body {  
+  padding-top: 0px;
+  background-image: url(/Images/pexels-photo-207662.jpeg);
+  }
+  .form-control { 
+  margin-bottom: 10px;
+  }
+  .login-screen-bg {  
+  background-color: #8de7ab;
+  }
+  .form1{
+    margin-top: 200px;
+  }
+  .date{
+    /* position: ; */
+    bottom: 0;
+  }
+.dangnhap a{
+  font-size: 10px;
+  text-decoration: none;
+}
+.dangnhap a:hover{
+  background-color: red;
+}

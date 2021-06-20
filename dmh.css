@@ -1,0 +1,7 @@
+.link{
+    color: blue;
+    text-underline-position: below;
+}
+.link :hover{
+    color: red;
+}

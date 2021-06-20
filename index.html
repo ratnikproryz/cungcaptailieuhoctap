@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Trang chủ- Website Cung cấp tài liệu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+  <link rel="stylesheet" type="text/css" href="TRANGCHU.CSS">  
+  <style type="text/css"></style>
+</head>
+    <!-- --đầu trang -->
+    <div class="top-header" style="background-color: #33CCFF;">
+        <div class="container">
+            <div class="row" style="background-color:#33CCFF">
+                <div class="col-sm-3">
+                    <img src="./Images/logotl.png">
+                </div>
+                <div class="col-sm-7">
+                  <input type="text" id="tk" placeholder="Nhập tên tài liệu muốn tìm kiếm... ">
+                  <button type="submit" class="btn btn-primary"><span class="fa fa-search"></span> Tìm Kiếm</button>
+                </div>
+            </div> 
+        </div>
+    </div>  <!-- End  -->
+    <!--Menu-->
+    <!-- <div class="menu"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active menu" >
+                  <a class="nav-link" href="#" >Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tài liệu</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Đề thi
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Toán</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Lý</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Hóa</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sinh</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sử</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Địa</a> 
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đề Minh Hoạ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tin Tức</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0" id="nut">
+                <button class="btn btn-outline-success my-2 my-sm-0" style="float: right;font-size: 25px;" type="button" onclick="window.location.href='./login.html'">Đăng nhập</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" style="font-size: 25px;" onclick="window.location.href='./dangki1.html'">Đăng kí</button>
+              </form>
+            </div>
+          </nav>
+    <!-- </div>  end -->
+    <!--chủ đề chính-->
+    <div class="container">
+        <class class="row">
+            <div class="col-12">
+                <!--slide ảnh-->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="./Images/pexels-jeshootscom-442574.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./Images/pexels-ketut-subiyanto-4132326.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./Images/pexels-photo-207662.jpeg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+
+        </class>
+    </div>
+    
+    <!--hiệu ứng bong tuyết-->
+    <!-- <div class='snow-container'> 
+            <div class='snow foreground'></div> 
+            <div class='snow foreground layered'></div> 
+            <div class='snow middleground'></div> 
+            <div class='snow middleground layered'></div> 
+            <div class='snow background'></div> 
+            <div class='snow background layered'></div>
+    </div> end -->
+  <!--tao o-->
+  <h2 align="center">Toán Học</h2>
+  <div class="container"> 
+   <div class="row products"> 
+    <div class="col-md-4 gt"> 
+     <div> <img src="Images/12_GTCB-001.png" alt="Sản phẩm 1" class="img-circle img-thumbnail"> 
+      <h2>Tài Liệu Ôn Tập Cả Năm</h2> 
+      <dl class="dl-horizontal"> 
+       <dt>Năm: 2021</dt> 
+       <dd>Mới Nhất</dd> 
+      </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4 gt"> 
+     <div> <img src="Images/congthucpng.jpg" alt="Sản phẩm 2" class="img-circle img-thumbnail"> 
+      <h2>Công Thức Giải Nhanh</h2> 
+      <dl class="dl-horizontal"> 
+   
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4 gt"> 
+     <div> <img src="Images/toande1.jpg" alt="Sản phẩm 3" class="img-circle img-thumbnail"> 
+      <h2>Đề Số 1</h2> 
+      <dl class="dl-horizontal"> 
+
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <h2 align="center">Vật Lý</h2>
+  <div class="container"> 
+   <div class="row products"> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/ly12.jpg" alt="Sản phẩm 1" class="img-circle img-thumbnail"> 
+      <h2>Tài Liệu Ôn Tập Cả Năm</h2> 
+      <dl class="dl-horizontal"> 
+
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/tom-tat-ly-thuyet-vat-ly-12.jpg" alt="Sản phẩm 2" class="img-circle img-thumbnail"> 
+      <h2>Công Thức Giải Nhanh</h2> 
+      <dl class="dl-horizontal"> 
+    
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/tracnhiemvatly.jpg" alt="Sản phẩm 3" class="img-circle img-thumbnail"> 
+      <h2>Đề số 1</h2> 
+      <dl class="dl-horizontal"> 
+     
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a>  
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <h2 align="center">Hoá Học</h2>
+  <div class="container"> 
+   <div class="row products"> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/hoc12.png" alt="Sản phẩm 1" class="img-circle img-thumbnail"> 
+      <h2>Tài Liệu Ôn Tập Cả Năm</h2> 
+      <dl class="dl-horizontal"> 
+
+        <dt>Năm: 2021</dt> 
+       <dd>Mới Nhất</dd> 
+      </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/congthuchoa.png" alt="Sản phẩm 2" class="img-circle img-thumbnail"> 
+      <h2>Công Thức Giải Nhanh</h2> 
+      <dl class="dl-horizontal"> 
+       
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a>  
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/dehoa12.jpg" alt="Sản phẩm 3" class="img-circle img-thumbnail"> 
+      <h2>Đề Số 1</h2> 
+      <dl class="dl-horizontal"> 
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <h2 align="center">Sinh Học</h2>
+  <div class="container"> 
+   <div class="row products"> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/Sinhhoc12.jpg" alt="Sản phẩm 1" class="img-circle img-thumbnail"> 
+      <h2>Tài Liệu Ôn Tập Cả Năm</h2> 
+      <dl class="dl-horizontal"> 
+   
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a>  
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/congthucsinh.png" alt="Sản phẩm 2" class="img-circle img-thumbnail"> 
+      <h2>Công Thức Giải Nhanh</h2> 
+      <dl class="dl-horizontal"> 
+  
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/deso1sinh.png" alt="Sản phẩm 3" class="img-circle img-thumbnail"> 
+      <h2>Đề Số 1</h2> 
+      <dl class="dl-horizontal"> 
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+  <h2 align="center">Lịch Sử</h2>
+  <div class="container"> 
+   <div class="row products"> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/su.jpg" alt="Sản phẩm 1" class="img-circle img-thumbnail"> 
+      <h2>Tài Liệu Ôn Tập Cả Năm</h2> 
+      <dl class="dl-horizontal"> 
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/su2.jpg" alt="Sản phẩm 2" class="img-circle img-thumbnail"> 
+      <h2>Công Thức Giải Nhanh</h2> 
+      <dl class="dl-horizontal"> 
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a>  
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div> <img src="Images/sude1.png" alt="Sản phẩm 3" class="img-circle img-thumbnail"> 
+      <h2>Đề Số 1</h2> 
+      <dl class="dl-horizontal"> 
+        <dt>Năm: 2021</dt> 
+        <dd>Mới Nhất</dd> 
+       </dl> <a href="#" class="btn btn-primary" title="Chi tiết">Xem Chi tiết »</a> 
+     </div> 
+    </div> 
+   </div>
+  </div> 
+
+  <!--footer-->
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <img src="Images/logotl.png" style="display: flex;">
+
+        <p class="footer-links">
+          <a href="#" class="link-1">Trang Chủ</a>
+          
+          <a href="#">Tài Liệu</a>
+        
+          <a href="#">Đề Thi</a>
+        
+          <a href="#">Đề Minh Hoạ</a>
+          
+          <a href="#">Tin Tức</a>
+        </p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>Trường đại học CNTT Việt-Hàn</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0846785667</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="nvdung.20it1@vku.udn.vn" style="color: white;">nvdung.20it1@vku.udn.vn</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+</body>	
+</html>

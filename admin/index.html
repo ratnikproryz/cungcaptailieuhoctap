@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+    <link href="assets/vendor/chartsjs/Chart.min.css" rel="stylesheet">
+    <link href="assets/vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i>Bảng Điều Khiển</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-file-alt"></i>Hình Thức</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-table"></i>Bảng</a>
+                </li>
+                <li>
+                    <a href="charts.html"><i class="fas fa-chart-bar"></i>Bảng Xếp Hạng</a>
+                </li>
+               
+                <li>
+                    <a href="#authmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-user-shield"></i>Xác Thực</a>
+                    <ul class="collapse list-unstyled" id="authmenu">
+                        <li>
+                            <a href="/login.html"><i class="fas fa-lock"></i>Đăng Nhập</a>
+                        </li>
+                        <li>
+                            <a href="/dangki.html"><i class="fas fa-user-plus"></i>Đăng Kí</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-user-lock"></i>Quên Mật Khẩu</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="users.html"><i class="fas fa-user-friends"></i>Người Dùng</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i>Cài Đặt</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown">
+                                    <i class="fas fa-link"></i> <span>Truy Cập Nhanh</span> 
+                                    <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-list"></i>Nhật Kí Truy Cập</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-database"></i>Sao Lưu</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i>Cập Nhật</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i>Vai Trò</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="" class="nav-item nav-link dropdown-toggle text-secondary" data-toggle="dropdown"><i class="fas fa-user"></i> <span>Dũng</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i>Hồ Sơ</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Thư</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Cài Đặt</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="../login.html" class="dropdown-item"><i class="fas fa-sign-out-alt"></i>Đăng Xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <div class="page-pretitle">Tổng Quan</div>
+                            <h2 class="page-title">Bảng Điều Khiển</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="teal fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Tìm Kiếm</p>
+                                                <span class="number">6,267</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i>Trong Tuần
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="olive fas fa-money-bill-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Doanh Thu Truy Cập</p>
+                                                <span class="number">$1,800</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i>Trong tháng này
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="violet fas fa-eye"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Lượt Xem</p>
+                                                <span class="number">28,210</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-stopwatch"></i>Trong Tháng Này
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="orange fas fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Yêu Cầu</p>
+                                                <span class="number">75</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-envelope-open-text"></i>Trong Tháng
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="content">
+                                            <div class="head">
+                                                <h5 class="mb-0">Lưu Lượng Truy Cập </h5>
+                                                <p class="text-muted">Dữ liệu khách truy cập trang web</p>
+                                            </div>
+                                            <div class="canvas-wrapper">
+                                                <canvas class="chart" id="trafficflow"></canvas>
+                                            </div>
+                                            <div class="ui hidden divider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="content">
+                                            <div class="head">
+                                                <h5 class="mb-0">Tổng quan về lượt tìm kiếm</h5>
+                                                <p class="text-muted">Dữ liệu doanh số trong năm</p>
+                                            </div>
+                                            <div class="canvas-wrapper">
+                                                <canvas class="chart" id="sales"></canvas>
+                                            </div>
+                                            <div class="ui hidden divider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="mb-0">Khách hàng truy cập hàng đầu</h5>
+                                        <p class="text-muted">Dữ liệu truy cập trang web năm hiện tại</p>
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        <table class="table no-margin bg-lighter-grey">
+                                            <thead class="success">
+                                                <tr>
+                                                    <th>Quốc Gia</th>
+                                                    <th class="text-right">Lượt xem</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-vn"></i> Việt Nam</td>
+                                                    <td class="text-right">1,000,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-in"></i> India</td>
+                                                    <td class="text-right">21,280</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-jp"></i> Japan</td>
+                                                    <td class="text-right">18,210</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-gb"></i> United Kingdom</td>
+                                                    <td class="text-right">15,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-es"></i> Spain</td>
+                                                    <td class="text-right">14,276</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-de"></i> Germany</td>
+                                                    <td class="text-right">13,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-br"></i> Brazil</td>
+                                                    <td class="text-right">12,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-id"></i> Indonesia</td>
+                                                    <td class="text-right">11,886</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-ph"></i> Philippines</td>
+                                                    <td class="text-right">11,509</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="flag-icon flag-icon-nz"></i> New Zealand</td>
+                                                    <td class="text-right">1,700</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="mb-0">Trang được truy cập nhiều nhất</h5>
+                                        <p class="text-muted">Dữ liệu khách truy cập trang web</p>
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        <table class="table no-margin bg-lighter-grey">
+                                            <thead class="success">
+                                                <tr>
+                                                    <th>Tên Trang</th>
+                                                    <th class="text-right">Truy cập</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>/Trangchu.html<a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">8,340</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/toan.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">7,280</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/ly.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">6,210</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/login.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">5,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/dangki.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">4,276</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/index.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">3,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/deminhhoa.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">2,176</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/toan2.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">1,886</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/toan3.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">1,509</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>/index.html <a href="#"><i class="fas fa-link blue"></i></a></td>
+                                                    <td class="text-right">1,100</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="blue large-icon mb-2 fas fa-thumbs-up"></i>
+                                            <h4 class="mb-0">+21,900</h4>
+                                            <p class="text-muted">LƯỢT THÍCH TRÊN FACEBOOK</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="orange large-icon mb-2 fas fa-reply-all"></i>
+                                            <h4 class="mb-0">+22,566</h4>
+                                            <p class="text-muted">NGƯỜI THEO DÕI INSTAGRAM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="grey large-icon mb-2 fas fa-envelope"></i>
+                                            <h4 class="mb-0">+15,566</h4>
+                                            <p class="text-muted">NGƯỜI ĐĂNG KÝ E-MAIL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="olive large-icon mb-2 fas fa-dollar-sign"></i>
+                                            <h4 class="mb-0">+98,601</h4>
+                                            <p class="text-muted">TỔNG DOANH SỐ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chartsjs/Chart.min.js"></script>
+    <script src="assets/js/dashboard-charts.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
